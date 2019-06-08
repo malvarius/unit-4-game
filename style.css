@@ -1,0 +1,30 @@
+body {
+background-color: blue;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+}
+
+.title{
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    text-align: center;
+    height: 8%;
+    width: 25%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 36px;
+    background-color: aliceblue;
+    padding-top: 2%;
+}
+.instructions {position: absolute;
+    top: 15%;
+    left: 1%;
+    text-align: center;
+    height: 40%;
+    width: 40%;
+    background-color: chocolate;
+}
+
