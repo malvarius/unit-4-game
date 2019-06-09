@@ -14,6 +14,10 @@ html, body {
       border-width: 5px;
       border-radius: 8px;
   }
+  .headerText{
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 36px;
+  }
 
   .c:active{
     border-color: blue;
