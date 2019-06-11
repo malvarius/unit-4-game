@@ -43,3 +43,9 @@ html, body {
     height: 200px;
     width: 200px;
 }
+#yourNum, #addNum, #win, #loss {
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 75px;
+    font-weight: bold;
+}

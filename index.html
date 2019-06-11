@@ -20,10 +20,10 @@
                 <h1 class="title mt-5 pt-3 ">Crystal Game</h1>
             </div>
             <div class="col-md-6 offset-md-1 h-25 d-inline-block text-center">
-                <img class="c c1" value= "1" src="./crystal1.jfif" alt="">
-                <img class="c c2" value= "2" src="./crystal 2.jfif" alt="">
-                <img class="c c3" value= "3" src="./crystal3.jfif" alt="">
-                <img class="c c4" value= "4" src="./crystal4.jfif" alt="">
+                <img class="c c1"  src="./crystal1.jfif" alt="">
+                <img class="c c2"  src="./crystal 2.jfif" alt="">
+                <img class="c c3"  src="./crystal3.jfif" alt="">
+                <img class="c c4"  src="./crystal4.jfif" alt="">
             </div>
         </div>
         <div class="row h-50 mt-5 text-center ml-5">
@@ -44,12 +44,14 @@
                 <div class="row  h-50 ">
                     <div class="col-md-6 offset-md-3 borderSection text-center">
                         <p class="headerText">Computer Number</p>
+                        <p id="addNum"></p>
                     </div>
                 </div>
 
                 <div class="row  h-50 mt-3">
                     <div class="col-md-6 offset-md-3 borderSection text-center">
-                        <p class="headerText" id="sumIt">Your Number</p>
+                        <p class="headerText" value = "0" id="sumIt">Your Number</p>
+                        <p id="yourNum"></p>
                     </div>
                 </div>
 
@@ -58,9 +60,11 @@
         <div class="row mt-5 text-center h-25">
             <div class="col-md-4 offset-md-1 h-75 borderSection">
                 <p class="headerText">Wins</p>
+                <p id="win"></p>
             </div>
             <div class="col-md-4 offset-md-2 h-75 borderSection">
                 <p class="headerText">Losses</p>
+                <p id="loss"></p>
             </div>
 
         </div>
