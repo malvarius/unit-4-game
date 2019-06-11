@@ -1,8 +1,11 @@
 var wins = 0;
 var losses = 0;
+var numSum = 0;
 // displays wins and losses
 $('#win').text(wins);
 $('#loss').text(losses);
+// displays your sum starting at 0
+$('#yourNum').text(numSum);
 
 //  randCompGen function is computer guess function to get number 19-120
 var randCompGen = function () {
@@ -33,55 +36,64 @@ console.log('Crystal 4 value =' + crystal4)
 var crystalSum = 0;
 
 // assigns grystal value to data-number attr of each button
+var assignCrystals = function(){
 $('.c1').attr('data-number', crystal1);
 $('.c2').attr('data-number', crystal2);
 $('.c3').attr('data-number', crystal3);
 $('.c4').attr('data-number', crystal4);
+}
+assignCrystals();
 
-var numSum = 0;
 // function adds value to the sum of crystal guesses for each crystal
 $('.c1').on('click', function () {
-
   numSum = numSum + parseInt($('.c1').attr('data-number'));
   $('#yourNum').text(numSum);
-
+  winLossCheck();
 })
 $('.c2').on('click', function () {
-
   numSum = numSum + parseInt($('.c2').attr('data-number'));
   $('#yourNum').text(numSum);
-
+  winLossCheck();
 })
 $('.c3').on('click', function () {
-
   numSum = numSum + parseInt($('.c3').attr('data-number'));
   $('#yourNum').text(numSum);
-
+  winLossCheck();
 })
 $('.c4').on('click', function () {
-
   numSum = numSum + parseInt($('.c4').attr('data-number'));
   $('#yourNum').text(numSum);
-
+  winLossCheck();
 })
 
-if (numSum==compChoice){
-
-
+//  function to chec win or loss and win condition generates new random number and sets user number to 0
+//also adds to wins or losses 
+var winLossCheck = function () {
+  if (numSum === compChoice) {
+    wins++
+    numSum = 0;
+    compChoice = randCompGen();
+    $('#win').text(wins);
+    $('#loss').text(losses);
+    $('#yourNum').text(numSum);
+    $('#addNum').text(compChoice);
+    crystal1 = crystalChoice();
+    crystal2 = crystalChoice();
+    crystal3 = crystalChoice();
+    crystal4 = crystalChoice();
+    assignCrystals();
+  } else if (numSum > compChoice) {
+    losses++
+    numSum = 0;
+    compChoice = randCompGen();
+    $('#win').text(wins);
+    $('#loss').text(losses);
+    $('#yourNum').text(numSum);
+    $('#addNum').text(compChoice);
+    crystal1 = crystalChoice();
+    crystal2 = crystalChoice();
+    crystal3 = crystalChoice();
+    crystal4 = crystalChoice();
+    assignCrystals();
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
