@@ -1,6 +1,12 @@
 
 html, body {
     height: 100%;
+    background-image: url('./memphis-mini-dark.png');
+    color: mediumseagreen;
+  }
+
+  .backGround {
+      background-color: aliceblue;
   }
   
   .full-height {

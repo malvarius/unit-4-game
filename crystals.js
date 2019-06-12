@@ -45,23 +45,8 @@ $('.c4').attr('data-number', crystal4);
 assignCrystals();
 
 // function adds value to the sum of crystal guesses for each crystal
-$('.c1').on('click', function () {
-  numSum = numSum + parseInt($('.c1').attr('data-number'));
-  $('#yourNum').text(numSum);
-  winLossCheck();
-})
-$('.c2').on('click', function () {
-  numSum = numSum + parseInt($('.c2').attr('data-number'));
-  $('#yourNum').text(numSum);
-  winLossCheck();
-})
-$('.c3').on('click', function () {
-  numSum = numSum + parseInt($('.c3').attr('data-number'));
-  $('#yourNum').text(numSum);
-  winLossCheck();
-})
-$('.c4').on('click', function () {
-  numSum = numSum + parseInt($('.c4').attr('data-number'));
+$('.c').on('click', function () {
+  numSum = numSum + parseInt($(this).attr('data-number'));
   $('#yourNum').text(numSum);
   winLossCheck();
 })
