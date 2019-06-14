@@ -22,25 +22,14 @@ var crystalChoice = function () {
   var rand = Math.floor(Math.random() * 12) + 1;
   return rand;
 }
-//   assigns values to each crystal
-var crystal1 = crystalChoice();
-var crystal2 = crystalChoice();
-var crystal3 = crystalChoice();
-var crystal4 = crystalChoice();
 
-console.log('=========');
-console.log('Crystal 1 value =' + crystal1);
-console.log('Crystal 2 value =' + crystal2)
-console.log('Crystal 3 value =' + crystal3)
-console.log('Crystal 4 value =' + crystal4)
-var crystalSum = 0;
 
 // assigns grystal value to data-number attr of each button
 var assignCrystals = function(){
-$('.c1').attr('data-number', crystal1);
-$('.c2').attr('data-number', crystal2);
-$('.c3').attr('data-number', crystal3);
-$('.c4').attr('data-number', crystal4);
+$('.c1').attr('data-number', crystalChoice());
+$('.c2').attr('data-number', crystalChoice());
+$('.c3').attr('data-number', crystalChoice());
+$('.c4').attr('data-number', crystalChoice());
 }
 assignCrystals();
 
