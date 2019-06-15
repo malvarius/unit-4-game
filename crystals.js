@@ -9,7 +9,7 @@ $('#yourNum').text(numSum);
 
 //  randCompGen function is computer guess function to get number 19-120
 var randCompGen = function () {
-  var randNum = Math.floor(Math.random() * 120) + 19;
+  var randNum = Math.floor(Math.random() * 101) + 19;
   return randNum;
 }
 
@@ -24,12 +24,11 @@ var crystalChoice = function () {
 }
 
 
-// assigns grystal value to data-number attr of each button
+// assigns crystal value to data-number attr of each button
 var assignCrystals = function(){
-$('.c1').attr('data-number', crystalChoice());
-$('.c2').attr('data-number', crystalChoice());
-$('.c3').attr('data-number', crystalChoice());
-$('.c4').attr('data-number', crystalChoice());
+  for (let i=1; i<5;i++){
+$('.c'+i).attr('data-number', crystalChoice());
+  }
 }
 assignCrystals();
 
